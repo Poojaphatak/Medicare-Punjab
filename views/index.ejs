@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare Plus - Telemedicine Platform</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>MediCare Plus</span>
+            </div>
+
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#doctors" class="nav-link">Doctors</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button class="emergency-btn" id="emergencyBtn">
+                    <i class="fas fa-ambulance"></i>
+                    Emergency
+                </button>
+            </div>
+
+            <div class="nav-auth">
+                <div class="language-selector">
+                    <select id="languageSelect">
+                        <option value="en">English</option>
+                        <option value="hi">हिंदी</option>
+                        <option value="pa">ਪੰਜਾਬੀ</option>
+                    </select>
+                </div>
+                <button class="login-btn" data-login="patient">
+                    <i class="fas fa-user"></i>
+                    Patient Login
+                </button>
+                <button class="login-btn" data-login="doctor">
+                    <i class="fas fa-user-md"></i>
+                    Doctor Login
+                </button>
+                <!-- <button class="login-btn admin" data-login="admin">
+                    <i class="fas fa-user-shield"></i>
+                    Admin Login
+                </button> -->
+            </div>
+
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-translate="hero.title">
+                    Your Health, Our Priority
+                </h1>
+                <p class="hero-subtitle" data-translate="hero.subtitle">
+                    Connect with certified doctors anytime, anywhere. Get expert medical consultation from the comfort
+                    of your home.
+                </p>
+                <div class="hero-buttons">
+                    <a href="/consultation" class="btn-primary" id="bookConsultationBtn">
+                        <i class="fas fa-video"></i>
+                        Book Video Consultation
+                    </a>
+                    <button class="btn-secondary" id="quickGuideBtn">
+                        <i class="fas fa-question-circle"></i>
+                        Quick Guide
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-card doctor-card">
+                    <i class="fas fa-user-md"></i>
+                    <span>500+ Doctors</span>
+                </div>
+                <div class="floating-card patient-card">
+                    <i class="fas fa-users"></i>
+                    <span>10,000+ Patients</span>
+                </div>
+                <div class="floating-card rating-card">
+                    <i class="fas fa-star"></i>
+                    <span>4.8 Rating</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="services" class="features">
+        <div class="container">
+            <h2 class="section-title" data-translate="services.title">Our Services</h2>
+            <div class="services-diagram">
+                <div class="central-hub">
+                    <div class="hub-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <span>MediCare Plus</span>
+                </div>
+
+                <div class="service-node" data-service="video-consultation">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <span data-translate="services.video">Video Consultation</span>
+                    <div class="service-line"></div>
+                </div>
+
+                <div class="service-node" data-service="digital-prescription">
+                    <div class="service-icon">
+                        <i class="fas fa-prescription"></i>
+                    </div>
+                    <span data-translate="services.prescription">Digital Prescription</span>
+                    <div class="service-line"></div>
+                </div>
+
+                <div class="service-node" data-service="first-aid">
+                    <div class="service-icon">
+                        <i class="fas fa-first-aid"></i>
+                    </div>
+                    <span data-translate="services.firstaid">First Aid Videos</span>
+                    <div class="service-line"></div>
+                </div>
+
+                <div class="service-node" data-service="home-remedies">
+                    <div class="service-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <span data-translate="services.remedies">Home Remedies</span>
+                    <div class="service-line"></div>
+                </div>
+
+                <div class="service-node" data-service="emergency">
+                    <div class="service-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <span data-translate="services.emergency">Emergency Services</span>
+                    <div class="service-line"></div>
+                </div>
+
+                <div class="service-node" data-service="hospitals">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <span data-translate="services.hospitals">Hospital Directory</span>
+                    <div class="service-line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Cards -->
+    <section class="feature-cards">
+        <div class="container">
+            <div class="cards-grid">
+                <div class="feature-card hoverable" data-feature="consultation">
+                    <div class="card-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 data-translate="cards.consultation.title">Video Consultation</h3>
+                    <p data-translate="cards.consultation.desc">Connect with experienced doctors through secure video
+                        calls. Get professional medical advice from anywhere.</p>
+                    <div class="card-footer">
+                        <span class="availability">Available 24/7</span>
+                    </div>
+                </div>
+
+                <div class="feature-card hoverable" data-feature="prescription">
+                    <div class="card-icon">
+                        <i class="fas fa-prescription-bottle-alt"></i>
+                    </div>
+                    <h3 data-translate="cards.prescription.title">Digital Prescriptions</h3>
+                    <p data-translate="cards.prescription.desc">Receive digital prescriptions directly on your device.
+                        Easy to store, share, and use at pharmacies.</p>
+                    <div class="card-footer">
+                        <span class="security">Secure & Verified</span>
+                    </div>
+                </div>
+
+                <div class="feature-card hoverable" data-feature="firstaid">
+                    <div class="card-icon">
+                        <i class="fas fa-first-aid"></i>
+                    </div>
+                    <h3 data-translate="cards.firstaid.title">First Aid Guide</h3>
+                    <p data-translate="cards.firstaid.desc">Learn essential first aid techniques through our
+                        comprehensive video library and step-by-step guides.</p>
+                    <div class="card-footer">
+                        <span class="educational">Expert Approved</span>
+                    </div>
+                </div>
+
+                <div class="feature-card hoverable" data-feature="remedies">
+                    <div class="card-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 data-translate="cards.remedies.title">Home Remedies</h3>
+                    <p data-translate="cards.remedies.desc">Discover natural home remedies for common health issues.
+                        Time-tested solutions for minor ailments.</p>
+                    <div class="card-footer">
+                        <span class="natural">100% Natural</span>
+                    </div>
+                </div>
+
+                <div class="feature-card hoverable" data-feature="emergency">
+                    <div class="card-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3 data-translate="cards.emergency.title">Emergency Helplines</h3>
+                    <p data-translate="cards.emergency.desc">Quick access to emergency services, ambulance contacts, and
+                        hospital directories across Punjab.</p>
+                    <div class="card-footer">
+                        <span class="urgent">Punjab Focused</span>
+                    </div>
+                </div>
+
+                <div class="feature-card hoverable" data-feature="rating">
+                    <div class="card-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 data-translate="cards.rating.title">Rating & Reviews</h3>
+                    <p data-translate="cards.rating.desc">Rate your experience and help others choose the best
+                        healthcare services. Transparent feedback system.</p>
+                    <div class="card-footer">
+                        <span class="community">Community Driven</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label" data-translate="stats.doctors">Certified Doctors</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number">10,000+</div>
+                    <div class="stat-label" data-translate="stats.patients">Happy Patients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label" data-translate="stats.availability">Available</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-number">4.8</div>
+                    <div class="stat-label" data-translate="stats.rating">User Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>MediCare Plus</span>
+                    </div>
+                    <p data-translate="footer.description">Your trusted healthcare companion providing quality medical
+                        services anytime, anywhere.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="footer.services.title">Services</h4>
+                    <ul>
+                        <li><a href="#" data-translate="footer.services.video">Video Consultation</a></li>
+                        <li><a href="#" data-translate="footer.services.prescription">Digital Prescription</a></li>
+                        <li><a href="#" data-translate="footer.services.firstaid">First Aid Guide</a></li>
+                        <li><a href="#" data-translate="footer.services.emergency">Emergency Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="footer.support.title">Support</h4>
+                    <ul>
+                        <li><a href="#" id="helpCenterBtn" data-translate="footer.support.help">Help Center</a></li>
+                        <li><a href="#" data-translate="footer.support.contact">Contact Us</a></li>
+                        <li><a href="#" data-translate="footer.support.privacy">Privacy Policy</a></li>
+                        <li><a href="#" data-translate="footer.support.terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="footer.contact.title">Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +91-1800-123-4567</p>
+                        <p><i class="fas fa-envelope"></i> support@medicareplus.in</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Punjab, India</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MediCare Plus. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header">
+            <div class="chatbot-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="chatbot-info">
+                <h4 data-translate="chatbot.title">MediBot Assistant</h4>
+                <span data-translate="chatbot.status">Online</span>
+            </div>
+            <button class="chatbot-close" id="closeChatbot">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="message bot-message">
+                <p data-translate="chatbot.welcome">Hello! I'm MediBot. How can I help you today?</p>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbotInput" placeholder="Type your message..."
+                data-translate-placeholder="chatbot.placeholder">
+            <button id="sendMessage">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <button class="chatbot-trigger" id="chatbotTrigger">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <!-- Modals -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="login-form">
+                <h3 id="loginTitle">Login</h3>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Login</button>
+                </form>
+                <p class="register-link">Don't have an account? <a href="#" id="registerLink">Register here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="emergencyModal">
+        <div class="modal-content emergency-content">
+            <span class="close">&times;</span>
+            <div class="emergency-info">
+                <h3><i class="fas fa-exclamation-triangle"></i> Emergency Services</h3>
+                <div class="emergency-contacts">
+                    <div class="emergency-section">
+                        <h4>Emergency Helplines</h4>
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>Medical Emergency: 102</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-ambulance"></i>
+                                <span>Ambulance: 108</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-fire"></i>
+                                <span>Fire Brigade: 101</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Police: 100</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="emergency-section">
+                        <h4>Punjab Ambulance Services</h4>
+                        <div class="ambulance-list">
+                            <div class="ambulance-item">
+                                <strong>Chandigarh:</strong> +91-172-2660002
+                            </div>
+                            <div class="ambulance-item">
+                                <strong>Ludhiana:</strong> +91-161-2444108
+                            </div>
+                            <div class="ambulance-item">
+                                <strong>Amritsar:</strong> +91-183-2555108
+                            </div>
+                            <div class="ambulance-item">
+                                <strong>Jalandhar:</strong> +91-181-2444108
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+     <script src="https://cdn.100ms.live/sdk/100ms-live.min.js"></script>
+
+    <script src="js/translations.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+
+</html>

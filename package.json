@@ -1,0 +1,30 @@
+{
+  "name": "my-express-app",
+  "version": "1.0.0",
+  "description": "A simple Express application using EJS for templating.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "vite",
+    "build:video": "esbuild src/video.js --bundle --outfile=public/video-bundle.js --platform=browser --format=esm --sourcemap"
+  },
+  "dependencies": {
+    "@100mslive/hms-video": "^0.9.28",
+    "@100mslive/hms-video-store": "^0.12.38",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.18.1",
+    "vite": "^7.1.5"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "devDependencies": {
+    "esbuild": "^0.25.9",
+    "parcel": "^2.15.4"
+  }
+}
