@@ -141,6 +141,20 @@ const connectDB = async () => {
 
 connectDB();
 
+app.get("/doctor-signup", (req, res) => {
+    res.render("doctorSignUp.ejs");
+})
+
+app.get("/patient-login", (req, res) => {
+    res.render("patientLogin.ejs");
+})
+
+app.get("/pharmacy-signup", (req, res) => {
+    res.render("pharmacySignUp.ejs");
+})
+
+
+
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });

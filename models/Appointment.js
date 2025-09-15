@@ -46,7 +46,7 @@ const appointmentSchema = new mongoose.Schema({
         type: String,
         default: ''
     },
-    // Rating and review
+   
     rating: {
         type: Number,
         min: 1,
@@ -83,7 +83,7 @@ const appointmentSchema = new mongoose.Schema({
     timestamps: true
 });
 
-// Index for efficient queries
+
 appointmentSchema.index({ patientId: 1, date: -1 });
 appointmentSchema.index({ doctorId: 1, date: -1 });
 appointmentSchema.index({ date: 1, time: 1, doctorId: 1 });

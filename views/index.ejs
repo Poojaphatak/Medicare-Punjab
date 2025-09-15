@@ -27,7 +27,7 @@
                 <a href="#doctors" class="nav-link">Doctors</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#contact" class="nav-link">Contact</a>
-                <button class="emergency-btn" id="emergencyBtn">
+                <button class="emergency-btn" id="emergencyBtn" style="margin-right: 20px;">
                     <i class="fas fa-ambulance"></i>
                     Emergency
                 </button>
@@ -41,14 +41,30 @@
                         <option value="pa">ਪੰਜਾਬੀ</option>
                     </select>
                 </div>
-                <button class="login-btn" data-login="patient">
-                    <i class="fas fa-user"></i>
-                    Patient Login
-                </button>
-                <button class="login-btn" data-login="doctor">
-                    <i class="fas fa-user-md"></i>
-                    Doctor Login
-                </button>
+
+                <a href="/patient-login" style="text-decoration: none;">
+                    <button class="login-btn">
+                        <i class="fas fa-user"></i>
+                        Patient Login
+                    </button>
+                </a>
+
+                <a href="/doctor-signup" style="text-decoration: none;">
+                    <button class="login-btn">
+                        <i class="fas fa-user-md"></i>
+                        Doctor SignUp
+                    </button>
+                </a>
+
+                <a href="/pharmacy-signup" style="text-decoration: none;"">
+                    <button class="login-btn">
+                        <i class="fas fa-user-md"></i>
+                        Pharmacy SignUp
+                    </button>
+                </a>
+
+
+
                 <!-- <button class="login-btn admin" data-login="admin">
                     <i class="fas fa-user-shield"></i>
                     Admin Login
@@ -65,7 +81,7 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-container">
+        <div class="hero-container" style="justify-content: center !important;">
             <div class="hero-content">
                 <h1 class="hero-title" data-translate="hero.title">
                     Your Health, Our Priority
@@ -75,8 +91,8 @@
                     of your home.
                 </p>
                 <div class="hero-buttons">
-                    <a href="/consultation" class="btn-primary" id="bookConsultationBtn">
-                        <i class="fas fa-video"></i>
+                    <a href="/consultation" class="btn-primary" style="text-decoration: none !important;" id="bookConsultationBtn">
+                        <i class="fas fa-video" ></i>
                         Book Video Consultation
                     </a>
                     <button class="btn-secondary" id="quickGuideBtn">
@@ -85,7 +101,9 @@
                     </button>
                 </div>
             </div>
-            <div class="hero-image">
+
+            <!-- not using for now as data is not correct -->
+            <!-- <div class="hero-image">
                 <div class="floating-card doctor-card">
                     <i class="fas fa-user-md"></i>
                     <span>500+ Doctors</span>
@@ -98,7 +116,8 @@
                     <i class="fas fa-star"></i>
                     <span>4.8 Rating</span>
                 </div>
-            </div>
+            </div> -->
+
         </div>
     </section>
 
@@ -106,7 +125,7 @@
     <section id="services" class="features">
         <div class="container">
             <h2 class="section-title" data-translate="services.title">Our Services</h2>
-            <div class="services-diagram">
+            <div class="services-diagram" >
                 <div class="central-hub">
                     <div class="hub-icon">
                         <i class="fas fa-hospital"></i>
@@ -219,7 +238,7 @@
 
                 <div class="feature-card hoverable" data-feature="emergency">
                     <div class="card-icon">
-                        <i class="fas fa-phone-alt"></i>
+                        <i class="fa-solid fa-phone"></i>
                     </div>
                     <h3 data-translate="cards.emergency.title">Emergency Helplines</h3>
                     <p data-translate="cards.emergency.desc">Quick access to emergency services, ambulance contacts, and
@@ -252,28 +271,27 @@
                     <div class="stat-icon">
                         <i class="fas fa-user-md"></i>
                     </div>
-                    <div class="stat-number">500+</div>
+                    <!-- <div class="stat-number">500+</div> -->
                     <div class="stat-label" data-translate="stats.doctors">Certified Doctors</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <div class="stat-number">10,000+</div>
+                    <!-- <div class="stat-number">10,000+</div> -->
                     <div class="stat-label" data-translate="stats.patients">Happy Patients</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-icon">
                         <i class="fas fa-clock"></i>
                     </div>
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label" data-translate="stats.availability">Available</div>
+                    <div class="">24 &#92; 7</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-icon">
                         <i class="fas fa-star"></i>
                     </div>
-                    <div class="stat-number">4.8</div>
+                    <!-- <div class="stat-number">4.8</div> -->
                     <div class="stat-label" data-translate="stats.rating">User Rating</div>
                 </div>
             </div>

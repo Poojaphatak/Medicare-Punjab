@@ -2,9 +2,9 @@
   "name": "my-express-app",
   "version": "1.0.0",
   "description": "A simple Express application using EJS for templating.",
-  "main": "src/app.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node src/app.js",
+    "start": "node app.js",
     "dev": "vite",
     "build:video": "esbuild src/video.js --bundle --outfile=public/video-bundle.js --platform=browser --format=esm --sourcemap"
   },
